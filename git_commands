@@ -1,16 +1,18 @@
 Command line: git commands a lot easier, shorthand commands essentially.
 
-git clone https://github.com/gmdelc66/lecture0.git // Clonar este repository
-git add filename 	// Add this file to repository
-git commit -m "message"		// guarde los cambios en ese momento, y en message poner que cambios se 
-				// efectuaron para encontrar despues facilmente el cambio
-git status			// Checki the status or changes in repository
+Recopilation gmdelc66@gmail.com
 
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
+git clone https://github.com/gmdelc66/lecture0.git // Clone repository
 
-alias ga='git add'
+git config --global user.email "you@example.com" // *** Please tell me who you are.
+git config --global user.name "Your Name" 	// *** Please tell me who you are.
+
+alias ga='git add' filename		// Add this file to repository
 alias gac='git commit -am'
+git commit -m "message"			// add changes & a message to find this changes later
+Merge Conflicts				// all between <<<<< Head and ===== it your changes
+					// all between ===== >>>>>> "hash number" are other people changes
+					// You need to delete the lines you dont need it
 alias gb='git reset --soft'
 alias gba='git branch -a'
 alias gbl='git branch -l'
@@ -24,8 +26,10 @@ alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias gd='git diff'
 alias gf='git ls-files | grep'
-alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
+git pull				// Download last version in github
+alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)' 
 alias ggpull='git pull origin HEAD'
+alias gup='git pull --rebase'	
 alias ggpush='git push origin HEAD'
 alias gopush='git push origin master'
 alias gist='nocorrect gist'
@@ -38,7 +42,7 @@ alias glo='git log --oneline'
 alias globurl='noglob urlglobber '
 alias glp=_git_log_prettily
 alias gm='git merge --no-ff'
-alias gp='git push'
+alias gp='git push'			// 	to upload your local changes
 alias poat='git push origin --all && git push origin --tags'
 alias gr='git remote'
 alias grh='git reset HEAD'
@@ -54,7 +58,6 @@ alias gsr='git svn rebase'
 alias gss='git status -s'
 # List all submodule references only
 alias gsm='git ls-files --stage | grep 160000'
-alias gst='git status'
+alias gst='git status'					// Check the status or changes in repository
 alias gts='git status'
-alias gup='git pull --rebase'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
