@@ -1,5 +1,8 @@
 Command line: git commands a lot easier, shorthand commands essentially.
 
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
 alias ga='git add'
 alias gac='git commit -am'
 alias gb='git reset --soft'
