@@ -1,0 +1,84 @@
+How to install GITHUB on Ubuntu : Step by Step
+
+by Shusain · Published October 8, 2018 · Updated October 23, 2018
+
+Github is a web based implementation of Git. Similar to Git, it is a distributed version control system & also offers the source code management functionality offer by Git. Github has all the features of Git & offers some additional features of its own.
+
+In this tutorial, we will discuss how we can install Github on Ubuntu systems & use it like we use any git repository. So let’s start…
+
+Recommended Read : Informative guide to Gitlab tutorial for Beginners
+
+Also Read : A Gitlab tutorial — Things to do after installation
+Install Github on Ubuntu
+Step 1- Create a Github account
+
+To install github on Ubuntu, first we need to have a Github account. To create one goto Official Github Page , next you need to fill the form to create the account,
+
+install github on ubuntu
+
+Mention a username, email address & password to create the account. Once we have created the account, we will move onto next step.
+
+ 
+Step 2:- Install Git on the system
+
+Next step is to get the Git packages installed onto our system. Git packages are available with the default repositories on Ubuntu, so we don’t have to install any additional repos & we can simply install all the Git packages using the following command,
+
+$ sudo apt-get install git-core git-gui git-doc
+
+We are now ready to configure the github on our system & there are two using which we can use github on our system i.e. either using ‘http’ or accessing github using ‘ssh’ . We will discuss both process one by one.
+Step 3A- Using HTTP for connection
+
+For this method, we will start by configuring the username & email-address on git that we have used for Github. To configure the username, execute the following command from terminal,
+
+$ git config –global user.name “linuxtechlab”
+
+Replace “linuxtechlab” with your username. Next to configure the email address for git, use the following command,
+
+$ git config –global user.email “admin@linuxtechlab.com”
+
+Now, create a directory on your system for cloning the Github repository,
+
+$ mkdir /home/linuxtechlab/git_repo
+
+Make the directory git ready by running following command,
+
+$ cd /home/linuxtechlab/git_repo
+
+$ git init
+
+Now we can clone the repo from github, use the following command,
+
+$ git clone
+
+Again, replace linuxtechlab/testproject.git with your username & project name. Next you will asked to enter the username & password for Github, as soon as we do so cloning will start.
+
+We can than perform other Git related operations. If you need list of Git commands for reference, you can use the following tutorial Complete “Beginners to PRO” guide for GIT commands.
+Step 3B – Using SSH for connection
+
+For this method, we will start by creating Public/Private SSH keys also known as ‘ssh key pair’. Create the key using the following method,
+
+$ cd ~/.ssh
+
+Note:- If the following folder does not exist, than create it.
+
+To create key pair, use the command,
+
+$ ssh-keygen -t rsa -C “your_email@youremail.com”
+
+Once you hit enter you will be asked a bunch of options, you can hit enter to use the default values for all (unless you want to modify something). So we now have our ssh key pair. For next step we would the public key, it should be named as “id_rsa.pub” (unless you have modified the name, in that case look for file with .pub extension).
+
+Open the public key file & copy the content of the file. Now head over to web browser, where you are logged into the github account. We need to goto,
+
+Account Settings → SSH Keys → Add another public key
+
+Now paste the copied content of public key into the ‘key’ field & than press ‘Add key’. Now head back to terminal on Ubuntu & run the following command,
+
+$ ssh-add
+
+That’s it, we can now start the cloning on our system. As we did above, first create a folder for cloning the repository, make it git ready & than start the cloning,
+
+$ mkdir /home/linuxtechlab/git_repo
+
+$ git init
+
+$ git clone git@github.com:username/projectname.git
