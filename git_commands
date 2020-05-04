@@ -1,5 +1,11 @@
 Command line: git commands a lot easier, shorthand commands essentially.
 
+git clone https://github.com/gmdelc66/lecture0.git // Clonar este repository
+git add filename 	// Add this file to repository
+git commit -m "message"		// guarde los cambios en ese momento, y en message poner que cambios se 
+				// efectuaron para encontrar despues facilmente el cambio
+git status			// Checki the status or changes in repository
+
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
